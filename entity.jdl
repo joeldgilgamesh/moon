@@ -1,0 +1,36 @@
+entity Offre {
+	type String,
+    description String,
+    image String
+}
+
+entity Contact {
+	nom String,
+    prenom String,
+  email String,
+region String,
+typeService String,
+descriptionRequete String
+}
+
+// an ignored comment
+/** not an ignored comment */
+entity Actualite {
+	 titre String,
+ description String,
+ datePublication String
+}
+
+
+// Set pagination options
+paginate Actualite, Offre, Contact with pagination
+
+
+// Use Data Transfert Objects (DTO)
+dto * with mapstruct
+
+// Set service options to all except few
+service all with serviceImpl 
+
+// Set an angular suffix
+// angularSuffix * with mySuffix
